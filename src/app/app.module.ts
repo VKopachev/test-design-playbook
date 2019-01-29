@@ -41,6 +41,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { JwtInterceptorService } from './components/shared/interceptors/jwt-interceptor.service';
 import { ErrorInterceptorService } from './components/shared/interceptors/error-interceptor.service';
 import { LinkInfoDialogComponent } from './components/pages/admin-panel-link/admin-panel-link-info/link-info-dialog/link-info-dialog.component';
+import { ApplicantHelpDialogComponent } from './components/pages/main-container/applicant-help-dialog/applicant-help-dialog.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { LinkInfoDialogComponent } from './components/pages/admin-panel-link/adm
     ResultsCardComponent,
     TestResultTableComponent,
     TestResultRowComponent,
-    LinkInfoDialogComponent
+    LinkInfoDialogComponent,
+    ApplicantHelpDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +88,8 @@ import { LinkInfoDialogComponent } from './components/pages/admin-panel-link/adm
     MatDialogModule
   ],
   entryComponents: [
-    LinkInfoDialogComponent
+    LinkInfoDialogComponent,
+    ApplicantHelpDialogComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorService, multi: true },

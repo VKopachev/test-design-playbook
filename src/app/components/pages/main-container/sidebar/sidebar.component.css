@@ -3,10 +3,22 @@ app-sidebar-thumbnail {
 }
 
 .static__text {
-  margin: 10px;
+  z-index: 1;
   background-color: #fafafa;
-  text-align: center;
-  cursor: pointer;
+  cursor: default;
+  border: 0;
+  border-radius: 0;
 }
 
+.side__cards {
+  height: 91%;
+  overflow-y: auto;
+}
 
+.accent {
+  color: forestgreen;
+}
+
+.warning {
+  color: indianred;
+}

@@ -2,7 +2,8 @@
   <app-sidebar 
     class="sidebar__container" 
     [models]="currentModel"
-    (onSelect)="sideBarSelect($event)">
+    (onSelect)="sideBarSelect($event)"
+    [countCheckedElements]="currentSelectedCount">
   </app-sidebar>
 
   <app-test-content

@@ -7,9 +7,8 @@
 
 .sidebar__container {
   flex: 2;
-  overflow-y: auto;
   border-right: 1px solid lightgray;
-  background: white;
+  background: #d7d7d7;
 }
 
 .test__container {

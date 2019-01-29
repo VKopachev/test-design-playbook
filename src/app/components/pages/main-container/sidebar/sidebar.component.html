@@ -1,14 +1,23 @@
-<mat-card class="static__text">
-  Templates to choose
+<mat-card class="static__text" style="display: flex; justify-content: space-between; flex-direction: row">
+  <div>
+    Total amount: 23 <br>
+    <span [class.accent]="maxCheckedElements == countCheckedElements"
+      [class.warning]="countCheckedElements > maxCheckedElements">
+      Ticked: {{countCheckedElements}}/{{maxCheckedElements}}
+    </span>
+    <span *ngIf="countCheckedElements > maxCheckedElements" class="warning">
+      (too many)
+    </span>
+  </div>
+  <button mat-stroked-button color="primary" (click)="openHelpDialog()" >Help?</button>
 </mat-card>
-<app-sidebar-thumbnail *ngFor="let model of models; let index = index"
-                       [model]="model"
-                       [index]="index + 1"
-                       [currentSelected]="selectedModel"
-                       (click)="onSelectElement(model)">
-</app-sidebar-thumbnail>
-<mat-card class="static__text">
-  End of the list
-</mat-card>
+<div class="side__cards">
+  <app-sidebar-thumbnail *ngFor="let model of models; let index = index"
+                         [model]="model"
+                         [index]="index + 1"
+                         [currentSelected]="selectedModel"
+                         (click)="onSelectElement(model)">
+  </app-sidebar-thumbnail>
+</div>
 
 
